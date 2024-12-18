@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+   <script>
+     let a = 12;
+     let b = "Hii";
+     let c = true;
+     let d = null
+     document.write("The value of a i: ",a)
+     document.write("<br> The value of b is : ",b)
+     document.write("<br> The value of c is : ",c)
+     document.write("<br> The value of d is : ",d)
+
+     document.write("<br><br> The type of a is :",typeof a)
+     document.write("<br> The type of b is :",typeof b)
+     document.write("<br> The type of c is :",typeof c)
+     document.write("<br> The type of d is :",typeof d)
+
+     let e = 9, f="years", g=7, h="months";
+     document.getElementById("p1").innerHTML =e + " " + f + " " + g + " " + h;
+
+     const m = 5;
+     document.write("<br><br>value of m is : ",m)
+     a=40; //reinitialization of a
+     //m=25; // not possible
+     {
+        let a = 20; //redeclaration of a
+        //m=25 ; //reintialization not possible
+        const m =25
+        document.write(`<br>value of 'a' in this sub block is : ${a} and 'm' is ${m}`)
+     }
+     document.write("<br>value of a now : ",a)
+// Opertions
+     s=a<e;
+     document.write("<br><br>The Result of Relational operation is:",s)
+     p = a>e && m<e
+     document.write("<br> The Result of logicl AND :",p)
+     r = a<e?a:e
+     document.write("<br> The Result of ternary operation is :",r)
+     
+     x=a++
+     document.write(`<br><br> The Value of post increment operation is : ${x} and the value of a is ${a}`)
+     y=++e
+     document.write(`<br> The Value of pre increment operation is : ${y} and the valu of e is ${e}`)
+   </script>
+</body>
+</html>

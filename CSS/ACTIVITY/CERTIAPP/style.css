@@ -1,0 +1,58 @@
+/* FRONT PAGE */
+
+.nav3{
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    margin-right: 50px;
+    
+  
+    
+
+}
+
+.nav4{
+    text-align: right;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    background-color: white;
+    
+   
+  
+
+}
+
+ .front1{
+   
+    padding:1;
+    color: black;
+    text-decoration: none;    
+}
+.front2{
+    padding:1;
+    color: rgb(185, 32, 32);
+    text-decoration: none;  
+    margin-left: 30px;
+    text-decoration: underline;
+    text-underline-position: under;
+    
+}
+
+.front3{
+    text-align: center;
+}
+
+.certi1{
+    padding-top: 200px;
+}
+
+.front3 img{
+    width: 150px;
+}
+
+.front4{
+    padding-left: 760px;
+    padding-top: 30px;
+}
