@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1.Program to Swap two numbers using temporary variable</h1>
+    <p id="Bswap"></p>
+    <p id="Aswap"></p>
+
+    <h1>2.Program to swap two numbers without using temporary variable</h1>
+    <p id="before"></p>
+    <p id="after"></p>
+
+    <h1>3.Program to convert celsius to fahrenheit</h1>
+    <p id="celsius"></p>
+
+    <h1>4.program to find square of a number.</h1>
+    <p id="square"></p>
+
+    <h1>5.Program to find cube of a number.</h1>
+    <p id="cube"></p>
+
+    <h1>6.Program to find area of square,circle, rectangle,triangle</h1>
+    <p id="area"></p>
+
+    <h1>7.Program to find perimeter of rectangle,square,circle,triangle</h1>
+    <p id="perimeter"></p>
+
+    <h1>8.Program to find simple interest & compound interest</h1>
+    <p id="simpleinterest"></p>
+
+    <h1>9.Program to find largest among two numbers</h1>
+    <p id="largest"></p>
+
+    <h1>10.Program to find smallest among three numbers</h1>
+    <p id="smallest"></p>
+
+    <h1>11.Program to check the given number is zero,positive and negative</h1>
+    <p id="Result"></p>
+
+    <h1>12.Program to find whether the person is eligible for voting using ternary operator</h1>
+    <p id="voting"></p>
+
+    <h1>13.Write a Javascript program to compute the sum of the two given integers. if the sum is in the range 50..80 return 65 otherwise return 80(using ternary operator).</h1> 
+    <p id="sum"></p>
+
+    <script>
+        // 1.Program to Swap two numbers using temporary variable
+        let a = 10;
+        let b = 20;
+        document.getElementById ("Bswap").innerHTML = "Before swapping: a = " + a + " b = " + b;
+        let temp = a;
+        a = b;
+        b = temp;
+       document.getElementById ("Aswap").innerHTML = "After swapping: a = " + a + " b = " + b;
+
+       // 2.Program to swap two numbers without using temporary variable
+      let a1 = 30
+      let b1= 40
+      document.getElementById ("before").innerHTML += "<br>Before swapping: a1 = " + a1 + " b1 = " + b1;
+      a1 = a1 + b1;
+      b1 = a1 - b1;
+      a1 = a1 - b1;
+      document.getElementById ("after").innerHTML += "<br>After swapping: a1 = " + a1 + " b1 = " + b1;
+
+    //   3.Program to convert celsius to fahrenheit
+      let c = 25 ;
+      let f = (c * 9/5) + 32;
+      document.getElementById ("celsius").innerHTML += "<br>" + c + " Degree celsius is equal to fahrenheit: " + f;
+
+      //   4.program to find square of a number.
+      let num = 5;
+      let square = num * num;
+      document.getElementById ("square").innerHTML += "<br>square of " + num + " is " + square;
+
+      //   5.Program to find cube of a number.
+      let num1 =  7;
+      let cube = num1 * num1 * num1;
+      document.getElementById ("cube").innerHTML += "<br>cube of " + num1 + " is " + cube;
+
+    //   Program to find area of square,circle, rectangle,triangle
+    let r = 5;
+    let pi = 3.14;
+    let l = 6
+    let br = 8
+    let areacircle = pi * r * r;
+    let areasquare = r * r;
+    let arearectangle = l * br;
+    let areatriangle = 0.5 * l * br;
+    document.getElementById ("area").innerHTML += "<br>Area of circle is " + areacircle + "<br>Area of square is " + areasquare + "<br>Area of rectangle is " + arearectangle + "<br>Area of triangle is " + areatriangle;
+
+    // Program to find perimeter of rectangle,square,circle,triangle
+    let r1 = 5;
+    let pi1 = 3.14;
+    let l1= 5;
+    let br1 = 10;
+    let a2 = 5;
+    let b2 = 10;
+    let c2 =5;
+    let perimeterrectangle = 2 * (l1 + br1);
+    let perimetersquare = 4 * a2;
+    let perimetercircle = 2 * pi1 * r1;
+    let perimetretrianlge = a2+b2+c2;
+    document.getElementById ("perimeter").innerHTML += "<br>Perimeter of rectangle is " + perimeterrectangle + "<br>Perimeter of square is " + perimetersquare + "<br> Perimeter of circle is " + perimetercircle + "<br>Perimeter of triangle is " + perimetretrianlge;
+
+    //  Program to find simple interest & compound interest
+    let p = 10000;
+    let r2 = 5;
+    let t = 3;
+    let si = (p * r2 * t)/100;
+    let compoundAmount = p * (1+r2/100) *(1+r2/100)* (1+r2/100);
+    let compoundInterest = compoundAmount - p;
+    document.getElementById("simpleinterest") .innerHTML += "<br>Simple interest is " + si + "<br>Compound interest is " + compoundInterest;
+
+    // Program to find largest among two numbers
+    let num2 = 100;
+    let num3 = 200;
+    let largest = num2 > num3 ? num2 : num3;
+    document.getElementById("largest").innerHTML += "<br>Largest number is " + largest;
+
+    // Program to find smallest among three numbers
+    let num4 = 100;
+    let num5 = 200;
+    let num6 = 300;
+    let smallest = num4 < num5 && num4 < num6 ? num4 : num5 < num6 ? num5 : num6;
+    document.getElementById("smallest").innerHTML += "<br>Smallest number is " + smallest;
+
+    // Program to check the given number is zero,positive and negative
+    let number = 0;
+    let Result = (number === 0) && "The number is zero" ||
+                 (number > 0) && "The number is positive" ||
+                 (number < 0) && "The number is negative";
+                 document.getElementById("Result").innerHTML += "<br>" + Result;
+
+    // Program to find whether the person is eligible for voting using ternary operator
+    let age = 10;
+    let Eligible = age >= 18 ? "Eligible for voting" : "Not Eligible for voting"; 
+    document.getElementById("voting").innerHTML += "<br>" + Eligible;
+
+    // Write a Javascript program to compute the sum of the two given integers. if the sum is in the range 50..80 return 65 otherwise return 80(using ternary operator).
+    let num7 = 40;
+    let num8 = 25;
+    let sum = num7 + num8;
+    let result = sum >= 50 && sum <= 80 ? 65 : 80;
+    document.getElementById("sum").innerHTML += "The range of :" + result;
+    </script>
+</body>
+</html>
