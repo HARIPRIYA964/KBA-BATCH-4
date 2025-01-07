@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+
+    <script>
+        function addtoCart(itemId){
+            let qty = document.getElementById(`qty-${itemId}`).value
+            let price = document.getElementById(`price-${itemId}`).textContent
+            let total = qty * price
+            console.log(total)
+        }
+    </script>
+</head>
+<body>
+    <label for="" class="border border-1 border-black">item 1</label>
+    <label for="">Qty</label>
+    <input type="number" class="border border-black  mt-10 w-8" id="Qty">
+    <label for="">price:</label>
+    <label for="" id="price-1">180</label>
+    <input type="button" name="" id="" value="Add to Cart" onclick="addtoCart()"  class="border border-black w-[100px]" ><br>
+    <label for="" class="border border-1 border-black">item 2</label>
+    <label for="" >Qty</label>
+    <input type="number" class="border border-black  mt-10 w-8">
+    <label for="">price:</label>
+    <label for="" id="price">250</label>
+    <input type="button" name="" id="" value="Add to Cart"  class="border border-black w-[100px]"><br>
+
+    <label for="" class="border border-1 border-black">item 3</label>
+    <label for="">Qty</label>
+    <input type="number" class="border border-black  mt-10 w-8">
+    <label for="">price:</label>
+    <label for="">340</label>
+    <input type="button" name="" id="" value="Add to Cart"  class="border border-black w-[100px]"><br><br>
+    <input type="button" name="" id="" class="border border-black " value="Check Out">
+   
+</body>
+</html>

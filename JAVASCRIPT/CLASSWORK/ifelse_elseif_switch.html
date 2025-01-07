@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10, b = 15, c = 2 ,d ='2', f=6, x="/" ;
+        //ifelse
+        if(a<b){
+            document.write(`${a} is smaller`)
+        }
+        else{
+            document.write(`${b} is smaller`)
+        }
+
+        if(c==d){
+            document.write(`<br> ${c} is equal to ${d} `)
+        }
+        else{
+            document.write(`<br> ${c} is not equal to ${d} `)
+        }
+
+        if(c===d){
+            document.write(`<br> ${c} is equal to ${d} `)
+        }
+        else{
+            document.write(`<br> ${c} is not equal to ${d} `)
+        }
+        //ifelseif
+        if(a<b && a<c){
+            document.write(`<br> ${a} is smaller`)
+        }
+        else if(b<a && b<c){
+            document.write(`<br> ${b} is smaller`)
+        }
+        else{
+            document.write(`<br> ${c} is smaller`)
+        }
+
+        //Switch
+        switch(x){
+            case "+": {
+                let z;
+                z = a + b;
+                document.write( "<br> The sum is :",z)
+                break;
+            }
+            case "-": {
+                document.write("<br> The difference is:", a-b)
+                break;
+            }
+            case "*": {
+                document.write(" <br> The product is:", a*b)
+                break;
+            }
+            case "/": {
+                document.write("<br> The quotient is:", a/b)
+                break;
+            }
+            default: {
+                document.write("<br> Invalid operator")
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

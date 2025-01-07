@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = new Object();
+        person.fname = "Kiran";
+        person.lname = "T";
+        person.hobby = "Surfing"
+        person.basicPay = 5000;
+        person.TA = 500;
+        person.DA = 500;
+
+        person.getDetails = function(){
+            return `Person Name : ${this.fname+this.lname} Hobby : ${this.hobby} Person Total Payment: ${this.basicPay+this.TA+this.DA}`;
+        }
+        document.write (person.getDetails());
+        const myArray = Object.values(person);
+        console.log("Array",myArray);
+        const str = JSON.stringify(person);
+        console.log("JSON",str);
+        const jsonF = JSON.parse(str);
+        console.log("JSON Fromat",jsonF);
+    </script>
+</body>
+</html>

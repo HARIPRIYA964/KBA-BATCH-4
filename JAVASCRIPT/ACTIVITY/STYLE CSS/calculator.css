@@ -1,0 +1,93 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 25%;
+    height: 600px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deli {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: rgb(198, 219, 216);
+    border-radius: 8px;
+    border: 2px solid cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+}
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+   
+}
+
+input {
+    width: 70px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    box-shadow: 25px;
+}
+
+.bg2 {
+     background-color: rgb(27, 26, 26); 
+     
+    }
+.bg3 { 
+    background-color: rgb(90, 129, 127); 
+}
+.bg4 { 
+    background-color: rgb(236, 145, 41);
+ }
+.bg5 {
+     background-color: cadetblue; 
+    }
+.bg6 { 
+    background-color: rgb(172, 81, 172); 
+}
+.bg7 {
+     background-color: rgb(146, 136, 136); 
+    }
+
+.calculator input {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.calculator input:first {
+    margin-left: 0;
+}
+
+.calculator input:second {
+    margin-right: 0;
+}

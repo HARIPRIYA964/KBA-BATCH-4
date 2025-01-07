@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    document.write("1.JS program to find the sum of the elements in array.")
+    let arr = [1, 2, 3, 4, 5]
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    document.write("<br>Sum of the elements in array is: " + sum + "<br><br>")
+
+    document.write("2.JS program to store & print even numbers upto 20 in an array")
+    let evenNum = []
+    for (let i = 1; i <= 20; i++) {
+        if (i % 2 == 0) {
+            evenNum.push(i)
+            }
+            }
+            document.write("<br>Even numbers upto 20 are: " + evenNum + "<br><br>")
+
+    document.write("3.JS program to check whether a number is in the array and if present print the location")
+    let num = [1, 2, 3, 4, 5]
+    let searchNum = 3
+    for (let i = 0; i < num.length; i++) {
+        if (num[i] === searchNum) {
+            document.write("<br>Number " + searchNum + " is present at location " + i + " in the array<br><br>")
+            }
+    }
+
+    document.write("4.JS program to remove an element pesent in a specific location")
+    let num1 = [10, 20, 30, 40, 50]
+    let rem = 2
+    for( let i = rem; i < 5; i++) {
+        num1[i] = num1[i+1]
+        }
+        num1.pop()
+        document.write("<br>Array after removing element at location " + rem + " is: " + num1 + "<br><br>")
+
+        document.write("5.JS program to copy an element in an array to another array")
+        arr1=[10,20,30,40,50]
+        arr2=[]
+        document.write("<br> Array1:")
+        for(let i=0;i<arr1.length;i++){
+            document.write(",",arr1[i]);
+            arr2[i]=arr1[i];
+        }
+        document.write("<br>Array2:")
+        for(let i=0;i<arr2.length;i++){
+            document.write(",",arr2[i] )
+        }
+
+        document.write("<br><br>6.Pattern <br>")
+        for(let i=1;i<=3;i++){
+            for(let j=1;j<=i;j++){
+                document.write(i + " ")
+                }
+                document.write("<br>")
+            }
+
+        document.write("<br>")
+        for(let i=1;i<=3;i++){
+        for(let j=1;j<=3;j++){
+            document.write( + 2 + " ")
+            }
+            document.write("<br>")
+            }
+    document.write("<br>")
+    for(let i=1;i<=3;i++){
+        for(let j=1;j<=4-i;j++){
+            document.write(i + " ")
+            }
+            document.write("<br>")
+            }
+        
+   </script> 
+</body>
+</html>

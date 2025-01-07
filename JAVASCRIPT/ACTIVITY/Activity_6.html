@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("1.JS program to read array a=[20,25,30,35,40,45] and divide the array in to two seperate arrays having equal number of elements.")
+        let c = [20, 25, 30, 35, 40, 45]
+        let arr1 = []
+        let arr2 = []
+        let i = 0
+        for( x of c){
+            if(i < c.length /2){
+                arr1.push(x)
+                }else{
+                    arr2.push(x)
+                    }
+                    i ++
+                    }
+                    document.write("<br>Orginal Array is : ",c);
+                    document.write("<br>Array 1 is :",arr1);
+                    document.write("<br>Array 2 is : ",arr2);
+
+    </script>
+    <script>
+            document.write("<br><br>2.JS program to concatinate two arrays a=[1,2,3,4] & b=[5,6,7,8] into a single array")
+        let a = [1, 2, 3, 4]
+        let b = [5, 6, 7, 8]
+        let result = []
+        for (y of a) {
+            result.push(y)
+            }
+            for (y of b) {
+                result.push(y)
+                }
+                document.write("<br>Array a is : ", a);
+                document.write("<br>Array b is : ", b);
+                document.write("<br>Array a and b is : ", result);
+    </script>
+    <script>
+        document.write("<br><br>3.JS program to read an array and sort in ascending and descending order.")
+        arr = [64, 34, 25, 12, 22, 11, 90]
+        for(i=0; i<arr.length; i++){
+            for(j=0; j<arr.length-i; j++){
+                if(arr[i]>arr[j]){
+                    temp = arr[i]
+                    arr[i] = arr[j]
+                    arr[j] = temp
+                    }
+                    }
+                    }
+                    document.write("<br>Array is : ", arr);
+                    document.write("<br>Array in ascending order is : ", arr);
+                    document.write("<br>Array in descending order is : ", arr.reverse());
+
+    </script>
+    <script>
+            document.write("<br><br>Write a program to read the array [1,6,7,8,2,3,4,2,2].Find the occurance of 2 in this array.") 
+       let arr = [1, 6, 7, 8, 2, 3, 4, 2, 2]
+       let count = 0
+       for (x of arr) {
+        if (x == 2) {
+            count++
+            }
+            }
+            document.write("<br>Occurance of 2 in array is : ", count);
+            
+    </script>
+</body>
+</html>

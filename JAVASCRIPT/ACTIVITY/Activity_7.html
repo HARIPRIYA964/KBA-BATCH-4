@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>4.HTML page containing an input tab to enter temperature in celsius and on a button click, it should be converted to fahreinheit</h3>
+    <label for="">temperature in celsius:</label>
+    <input type="number" id="celsius" >
+    <button onclick="convert()">convert</button>
+    <p id="result"></p>
+    <script>
+        function convert(){
+            let celsius = document.getElementById("celsius").value;
+            let result = (celsius * 9/5) + 32;
+            document.getElementById("result").innerHTML = `Temperature in fahrenheit is ${result}°F`;
+            }
+            </script>
+
+
+    <h3>HTML page to read "name, date-of-birth" and diaplay this in format of id card on clicking "generate ID" button.</h3>
+    <label for="">Name:</label>
+    <input type="text" id="name" >
+    <label for="">Date of Birth:</label>
+    <input type="date" id="dob" >
+    <button onclick="generateId()">generate ID</button>
+    <p id="idcard"></p>
+    <script>
+        function generateId(){
+            let name = document.getElementById("name").value;
+            let dob = document.getElementById("dob").value;
+            let idcard =  `ID CARD: <br> Name: ${name} <br> Date of Birth: ${dob}`;
+            document.getElementById("idcard").innerHTML = idcard;
+            }
+    </script>
+
+
+
+    <h3>HTML to read a number and on clicking button find the square of the number.</h3>
+    <label for="">Enter a number:</label>
+    <input type="number" id="number" >
+    <button onclick="square()">square</button>
+    <p id="result1"></p>
+    <script>
+        function square(){
+            let num = document.getElementById("number").value;
+            let result1 = num * num;
+            document.getElementById("result1").innerHTML = `Square of ${num} is ${result1}`;
+            }
+    </script>
+
+<h3>Html page to enter names of fruits and insert the entered name to array and there is a dropdown and on selecting the index from drop down, display the fruit on the index.</h3>
+    <label for="">Enter a fruit:</label>
+    <input type="text" id="fruit" >
+    <button onclick="addFruit()">add fruit</button>
+    <select id="select">
+        <option value="select">select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <p id="result2"></p>
+    <script>
+      
+           
+    </script>
+</body>
+</html>

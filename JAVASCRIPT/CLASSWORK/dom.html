@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+    <script>
+        let element1 = document.createElement("h2")
+        element1.textContent = "welcome to the world of javascript"
+        document.getElementById("demo").appendChild(element1);
+        let element2 = document.createElement("input")
+        element2.placeholder = "Enter your Name"
+        document.getElementById("demo").appendChild(element2)
+        let label = document.createElement("label")
+        label.textContent = "Name :"
+        document.getElementById("demo").insertBefore(label,element2)
+    </script>
+</body>
+</html>

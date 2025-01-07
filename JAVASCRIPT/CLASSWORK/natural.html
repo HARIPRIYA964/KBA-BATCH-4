@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("The first 10 Natural numbers")
+        for(let i=1; i<=10;i++){
+            document.write("<br>",i,"<br>")
+        }
+        document.write("<br>Another way ")
+        for(let j=0; j<10; j++){
+            document.write("<br>",j+1)
+        }
+    </script>
+    <script>
+        document.write("<br><br> find the sum of 10 natural numbers")
+        
+            let sum=0;
+            for(let i=1; i<=10; i++){
+                sum=sum+i;
+            }
+            document.write("<br><br> The sum of:",sum)
+
+        
+
+        document.write("<br><br> find the series of 10,20,30,40,50 ,60" )
+
+            for( let k=10; k<=60; k+=10){
+                document.write("<br>",k)
+            }
+        
+  
+    </script>
+    <script>
+    document.write("<br><br> Factorial of a number")
+    let num=5;
+    let fact=1;
+    for(let i=1; i<=num; i++){
+        fact=fact*i;
+    }
+    document.write("<br><br> The factorial of  ",num," is: ",fact)
+        for(;num<0;n--){
+            fact = fact*1
+        }
+        document.write(`<br><br> factorial of ${num} is ${fact}`)
+    </script>
+   
+ 
+
+
+</body>
+</html>

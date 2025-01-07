@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function shop(){
+            const myshop = new Map([
+               ['Apple',[60,4]],
+               ['Orange',[50,3]],
+               ['Grape',[70,2]]
+            ]);
+           
+           
+           let sum = 0
+           myshop.forEach((value,key)=>{
+            if(Array.isArray(value)){
+                [price,Qty]= value
+                let total = price * Qty
+                sum += total
+            }
+            
+           })
+           document.getElementById('output').innerHTML = "<br>Total Price is :" + sum
+        }
+        
+    </script>
+</head>
+<body>
+    <h2>Shopping Cart</h2>
+    <button onclick="shop()">Show shopping Cart</button>
+    <div id="output"></div>
+</body>
+</html>

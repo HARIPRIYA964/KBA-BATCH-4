@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function mapMethods(){
+        //     const mymap = new Map();
+        // mymap.set("name","Haripriya");
+        // mymap.set("age",20);
+        // mymap.set("Employ",true);  
+        // mymap.set("Role",["Admin","User"])                                               //this map inserted to key value pair
+        // console.log(mymap.get('name'));
+        // console.log(mymap)
+
+        const mymap = new Map([
+            ["name","Haripriya"],
+            ["age",20],
+            ["Employ",true],
+            ["Role",["Admin","User"]]
+        ]);
+        document.getElementById("get").innerHTML = "Name :"+ mymap.get('name')                                            //get name from map
+        document.getElementById("has").innerHTML = "Age :"+ mymap.has('age')                                         // check age is present in map or not
+        document.getElementById("delete").innerHTML = "After deleting Name :"+ mymap.delete('name')                // delete name from map
+        let roles = mymap.get('Role')
+        document.getElementById("role").innerHTML = "Role :"+ roles.join(',');  
+
+         //Map Iteration
+        let output = '';
+        mymap.forEach((value,key)=>{                                                                  //forEach () method is used to iterate over the map 
+            if(Array.isArray(value)) {                                                                // to check if the value array or not
+                output += key + ' = ' + value.join(' and ') + '<br>';
+
+            }                                               
+            else{
+                output += key + ' = ' + value + '<br>';
+            }
+
+        })
+        document.getElementById("iteration").innerHTML = output;
+        
+        mymap.clear();                                                                                                 // clear all data from map
+        document.getElementById("clear").innerHTML = "After clearing map :"+ mymap.size;                                  
+        console.log(mymap);  
+    }                                         
+        
+
+       
+        
+    </script>
+</head>
+<body>
+    <h1>Map methods</h1>
+    <h2>Map Operations</h2>
+    <button onclick="mapMethods()"> Map methods</button>
+    <div id="get"></div>
+    <div id="has"></div>
+    <div id="delete"></div>
+    <div id="role"></div>
+    <div id="clear"></div>
+
+    <h2>Map Iteration</h2>
+    <div id="iteration"></div>
+    
+</body>
+</html>

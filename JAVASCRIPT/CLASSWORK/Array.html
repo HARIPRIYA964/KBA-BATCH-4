@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        document.write("The Array is a=[1,2,3,4,5] <br><br>")
+        let a =[1,2,3,4,5]
+        document.write("Element in position 2 is:",a[2],"<br>")
+
+       
+        a[2]=10
+        document.write("Element in position 2 is: ",a)
+        
+        for (let i = 0; i < a.length; i++) {
+            if (i == 2) {
+                a[i] = 10
+                }
+                }
+                document.write("<br> Element in position 2 is: ",a)
+
+        document.write("<br> The value of:")
+        for (let i = 0; i < a.length; i++) {
+            a[i] = a[i] + 2
+            }
+            document.write(a)
+            
+    </Script>
+</body>
+</html>
