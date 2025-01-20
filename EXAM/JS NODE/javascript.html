@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Other(){
+        let input = document.createElement("input")
+        document.appendChild(input)
+
+        }
+
+     
+    function ExpSubmit(){
+        let store = []
+        let exp = document.getElementById("exp").value 
+        let amount = document.getElementById("number").value
+        let date = document.getElementById("date") .value
+        let expn = new Map()
+        expn.set("expense",exp)
+        expn.set("amount",amount)
+        expn.set("date",date)
+        document.getElementById("submit").innerHTML = `Type of Exp: ${exp}<br> Amount: ${amount} <br> Date: ${date}`
+        store.push(expn)
+        console.log(store)
+
+        function showExpense(){
+          let Date =  document.getElementById("Date").value
+            if(store.date === Date){
+                document.getElementById("showexpen").innerHTML = `Type of Exp: ${exp}<br> Amount: ${amount} <br> Date: ${date}`
+            }
+            else{
+                document.getElementById("showexpen").innerHTML = "No Expenses"
+            }
+        }
+    }
+        
+
+   
+            
+</script>
+<body>
+    <label for="">Type of Exp</label>
+    <select name="" id="exp">
+        <option value="select">Select</option>
+        <option value="Hospital Exp">Hospital Exp</option>
+        <option value="Shopping Exp">Shopping Exp</option>
+        <option value="Gift Exp">Gift Exp</option>
+        <option value="Food Exp">Food Exp</option>
+        <option value="Other" onclick="Other()">Other</option>
+    </select> <br><br>
+    <label for="">Amount</label>
+    <input type="number" id="number"><br><br>
+    <label for="">Date</label>
+    <input type="date" id="date"><br><br>
+    <input type="button" value="submit" onclick="ExpSubmit()">
+    <p id="submit"></p><br><br>
+    <label for="">Date</label>
+    <input type="date" name="" id="Date">
+    <input type="button" value="submit" onsubmit="showExpense()">
+    <p id="showexpen"></p>
+
+    
+
+    
+</body>
+</html>
