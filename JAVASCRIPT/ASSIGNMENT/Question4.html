@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Name">Name</label>
+    <input type="text" id="Name"><br><br>
+    <button onclick="addStudent()">Add Student</button><br>
+
+    <label for="rollNumber">Roll Number:</label>
+    <select id="rollNumber">
+        <option value="">Select Roll Number</option>
+    </select>
+    <button onclick="displayStudentName()">Show Name</button>
+    
+    <p id="result"></p>
+
+    <script>
+        const students = [];
+
+        function addStudent() {
+            const name = document.getElementById("Name").value;
+            if (name) {
+                students.push(name);
+                const rollNumber = document.getElementById('rollNumber');
+                const option = document.createElement('option');
+                option.value = students.length - 1;
+                option.text = students.length;
+                rollNumber.add(option);
+                document.getElementById("Name").value = "";
+            } else {
+                alert("Please enter a name");
+            }
+        }
+
+        function displayStudentName() {
+            const rollNumber = document.getElementById('rollNumber').value;
+            const result = document.getElementById('result');
+
+            if (rollNumber !== "") {
+                result.innerText = "Student Name: " + students[rollNumber];
+            } else {
+                result.innerText = "Please select a roll number";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer6</title>
+</head>
+<script>
+    const valueArray = [];
+
+    function addArray() {
+        const inputField = document.getElementById('inputField');
+        const value = inputField.value.trim();
+        
+        if (value) {
+            valueArray.push(value);
+            inputField.value = '';
+            alert('Value added: ' + value);  
+        } else {
+            alert('Please enter a value');
+        }
+    }
+
+    function printArray() {
+        const output = document.getElementById('arrayOutput');
+        output.textContent = valueArray.join(', '); 
+    }
+</script>
+<body>
+    <label>Enter element:</label>
+    <input type="text" id="inputField"><br><br>
+    <button onclick='addArray()'>Add value</button>
+    <button onclick="printArray()">Print Array</button>
+    <p id="arrayOutput"></p>
+</body>
+</html>

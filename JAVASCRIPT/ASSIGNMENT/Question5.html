@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Area of Square</h1>
+    <label for="">Enter the side of the square:</label>
+    <input type="number" id="side"><br><br>
+    <button onclick="Square()">Area of square</button>
+    <p id="result1"></p>
+
+    <h1>Area of Rectangle</h1>
+    <label for="">Enter the length :</label>
+    <input type="number" id="length"><br><br>
+    <label for="">Enter the breadth :</label>
+    <input type="number" id="breadth"><br><br>
+    <button onclick="Rectangle()">Area of rectangle</button>
+    <p id="result2"></p>
+
+    <h1>Area of Circle</h1>
+    <label for="">Enter radius :</label>
+    <input type="number" id="radius"><br><br>
+    <button onclick="Circle()">Area of circle</button>
+    <p id="result3"></p>
+
+
+    <script>
+        function Square() {
+            const side = document.getElementById("side").value;
+            const result1 = document.getElementById("result1")
+            if(side>0){
+                const Area = side * side;
+                result1.innerText = `The area of square is ${Area}`;
+            }
+            else{
+                result1.innerText = "Not founded!"
+                }
+                }
+
+                function Rectangle() {
+                    const length = document.getElementById("length").value;
+                    const breadth = document.getElementById("breadth").value;
+                    const result2 = document.getElementById("result2")
+                    if(length>0 && breadth>0){
+                        const Area = length * breadth;
+                        result2.innerText = `The area of rectangle is ${Area}`;
+                        }
+                        else{
+                            result2.innerText = "Not founded!"
+                            }
+                            }
+                            function Circle() {
+                                const radius = document.getElementById("radius").value;
+                                const result3 = document.getElementById("result3")
+                                if(radius>0){
+                                    const Area = 3.14 * radius * radius;
+                                    result3.innerText = `The area of circle is ${Area}`;
+                                    }
+                                    else{
+                                        result3.innerText = "Not founded!"
+                                        }
+                                        }
+    </script>
+</body>
+</html>

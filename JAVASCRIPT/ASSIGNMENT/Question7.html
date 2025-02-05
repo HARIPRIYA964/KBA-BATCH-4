@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="element">
+                <input type="text" id="element" placeholder="Enter a number">
+            </label>
+            <button onclick="add()">Add</button>
+        </div>
+
+        <div>
+            <label for="search">
+                Search:
+                <input type="text" id="search" oninput="searchArray()" placeholder="Search for a number">
+            </label>
+            <p id="searchResult"></p>
+        </div>
+
+        <div>
+            <p id="indexElement">  element is: </p>
+            <p id="sortedArray">The array in sorted order is: </p>
+            <p id="reverseArray">The reversed array is: </p>
+        </div>
+    </div>
+
+    <script>
+        let array = [];  
+
+        function add() {
+            let element = document.getElementById("element").value;
+            let num = Number(element);
+            if (!isNaN(num)) { 
+                array.push(num);
+                updateDisplay();
+            } else {
+                alert("Please enter a valid number.");
+            }
+            document.getElementById("element").value = ""; 
+        }
+
+        function updateDisplay() {
+            
+            const indexElement = document.getElementById("indexElement");
+            indexElement.textContent = `Index 0 element is: ${array[0] !== undefined ? array[0] : "Array is empty"}`;
+            
+          
+            const sortedArray = document.getElementById("sortedArray");
+            sortedArray.textContent = `The array in sorted order is: ${[...array].sort((a, b) => a - b).join(", ")}`;
+            
+           
+            const reverseArray = document.getElementById("reverseArray");
+            reverseArray.textContent = `The reversed array is: ${[...array].reverse().join(", ")}`;
+        }
+
+        function searchArray() {
+            let searchInput = document.getElementById("search").value;
+            let num = Number(searchInput);
+
+            if (searchInput === "") {
+                document.getElementById("searchResult").textContent = ""; 
+            } else if (!isNaN(num)) {
+                if (array.includes(num)) {
+                    document.getElementById("searchResult").textContent = `${num} is in the entered array.`;
+                } else {
+                    document.getElementById("searchResult").textContent = `${num} is not in the entered array.`;
+                }
+            } else {
+                document.getElementById("searchResult").textContent = "Please enter a valid number.";
+            }
+        }
+    </script>
+</body>
+</html>

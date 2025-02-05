@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter the elements:</label>
+    <input type="text" id="element">
+    <button onclick="Max()">Maximum</button>
+    <p id="output"></p>
+
+    <script>
+        function Max() {
+            let array = [];
+            let element = document.getElementById("element").value;
+            const arr = element.split(" ");
+            array = arr.map(Number);  
+            let maxElement = Math.max(...array);
+
+
+document.getElementById("output").textContent = "Maximum element is: " + maxElement;
+}
+    </script>
+</body>
+</html>
