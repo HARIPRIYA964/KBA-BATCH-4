@@ -19,7 +19,7 @@ app.use('/api',adminauth);
 //     res.send('Hello World');
 
 // })
-mongoose.connect('mongodb://localhost/27017/KBA_COURSE').then(()=>{
+mongoose.connect('mongodb://localhost:27017/KBA_COURSE').then(()=>{
     console.log('MongoDB connected successfully to KBA_COURSE');
 })
 .catch((error)=>{

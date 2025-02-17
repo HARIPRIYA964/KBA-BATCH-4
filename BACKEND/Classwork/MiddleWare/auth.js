@@ -12,10 +12,13 @@ const authenticate =(req,res,next)=>{
     if(name=='authToken'){
        const verified = jwt.verify(token,process.env.SECRET_KEY)
        console.log(verified)
-       req.Username = verified.UserName;
-       req.Userrole = verified.UserRole;
-       next();     //go to next function
+       req.Username = verified.userName;
+       req.Userrole = verified.userRole;
+       console.log(req.Username);
+       console.log(req.Userrole);
        
+       next();     //go to next function
+       //break;
     }
     else{
         res.status(401).json({message:" Unauthorized"});
