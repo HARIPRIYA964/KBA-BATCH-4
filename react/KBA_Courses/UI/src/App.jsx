@@ -9,7 +9,7 @@ const App = () => {
     <div>
   
   <Home />
-   <CourseGrid  />
+   
    <AllCoursesButton />
    
     </div>
